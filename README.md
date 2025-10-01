@@ -1,5 +1,4 @@
-# jalmolina.github.io
-*Electronics Engineer | Embedded Systems Developer | Technical Educator*
+*Electronics Engineer | Embedded Systems Developer | Technical Educator*
 
 ---
 
