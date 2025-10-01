@@ -15,4 +15,4 @@ Me apasiona compartir conocimiento y construir soluciones prácticas.
 ## 📫 Contacto
 - [GitHub](https://github.com/jalmolina)
 - [LinkedIn](https://linkedin.com/in/TU-LINK)
-- Email: jal.molina@gmail.com
+- Email: [jal.molina@gmail.com](mailto:jal.molina@gmail.com)
