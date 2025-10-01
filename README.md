@@ -1,4 +1,4 @@
-# https://jalmolina.github.io/
+# Juan Alcides Molina López
 *Electronics Engineer | Embedded Systems Developer | Technical Educator*
 
 ---
