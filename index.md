@@ -18,7 +18,6 @@
   }
 </style>
 
-# Juan Alcides Molina López
 **Electronics Engineer | Embedded Systems Developer | Technical Educator**
 
 ## 👨‍💻 Sobre mí
