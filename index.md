@@ -1,7 +1,7 @@
 <style>
   body {
     font-family: 'Roboto', Arial, sans-serif;
-    background: linear-gradient(to right, #f9f9f9, #eef2f3);
+    background: linear-gradient(to right, #f9f9f9, #ffffff);
     color: #2c3e50;
     line-height: 1.6;
     margin: 40px;
