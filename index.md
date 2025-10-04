@@ -19,11 +19,17 @@
 </style>
 
 **Electronics Engineer | Embedded Systems Developer | PCB & CAD Designer**
+---
 
+<div class="section">
 ## 👨‍💻 Sobre mí
 Ingeniero electrónico especializado en **diseño de PCBs, programación de sistemas embebidos y modelado CAD 3D**.  
 Experiencia en microcontroladores **Arduino, STM32, PIC y ESP32**, desarrollo en **C y Python**, y aplicaciones de adquisición de datos con **LabVIEW y myRIO**.  
 Apasionado por crear soluciones robustas, documentadas y listas para producción.
+
+</div>
+
+<div class="section">
 
 ## 🔧 Áreas de especialización
 - Diseño y análisis de **PCBs con Altium Designer**, bajo normas IPC.  
@@ -33,6 +39,10 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
 - Simulación de sistemas embebidos con **Proteus**.  
 - Diseño 3D de piezas y ensambles con **Solid Edge, SolidWorks e Inventor**.  
 - Implementación de **RTOS en microcontroladores** para control en tiempo real.  
+
+</div>
+
+<div class="section">
 
 ## ⚙️ Proyectos Destacados
 - **PCB de activación de válvulas con circuito Spike & Hold y ESP32**  
@@ -53,12 +63,20 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
 - **Simulación de sistemas de control**  
   Modelado y validación de sistemas dinámicos en **MATLAB/Simulink**, con pruebas en hardware embebido.
 
+</div>
+
+<div class="section">
+
 ## 🛠️ Habilidades Técnicas
-- **Lenguajes:** C, C++, Python, Ladder, MATLAB.  
+- **Lenguajes:** C, C++, Python, Ladder, MATLAB, LabVIEW.  
 - **Microcontroladores:** Arduino, PIC, STM32, ESP32.  
-- **PCB & Electrónica:** Altium Designer, Proteus, EasyEDA.  
+- **PCB & Electrónica:** Altium Designer, Proteus, MultiSim, EasyEDA.  
 - **CAD 3D:** Solid Edge, SolidWorks, Inventor.  
 - **Control & Simulación:** LabVIEW, MATLAB/Simulink, RTOS.  
+
+</div>
+
+<div class="section">
 
 ## 🎓 Formación y Certificaciones
 - **Ingeniería Electrónica – Univ. Mayor de San Andrés** (Mención en Sistemas de Control).  
@@ -67,7 +85,13 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
 - Curso de **IoT con Python – Cisco** (2023).  
 - **LabVIEW Core 1 – National Instruments** (2020).  
 
+</div>
+
+<div class="section">
+
 ## 📫 Contacto
 - [GitHub](https://github.com/jalmolina)
 - [LinkedIn](https://www.linkedin.com/in/juan-a-molina-l)
 - Email: [jal.molina@gmail.com](mailto:jal.molina@gmail.com)
+
+</div>
