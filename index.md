@@ -18,7 +18,7 @@
   }
 </style>
   
-<div class="section" style="text-align:center; font-size:1.2em; color:#2c3e50;">
+<div class="section" style="text-align:center;">
   <strong>Electronics Engineer | Embedded Systems Developer | PCB & CAD Designer</strong>
 </div>
 
