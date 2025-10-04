@@ -17,8 +17,9 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
 
-</style>
-Electronics Engineer | Embedded Systems Developer | PCB & CAD Designer
+<div class="section" style="text-align:center;">
+  <strong>Electronics Engineer | Embedded Systems Developer | PCB & CAD Designer</strong>
+</div>
 
 ## 👨‍💻 Sobre mí
 Ingeniero electrónico especializado en **diseño de PCBs, programación de sistemas embebidos y modelado CAD 3D**.  
