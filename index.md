@@ -16,9 +16,9 @@
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
-<style>
+</style>
   
-<div class="section" style="text-align:center;">
+<div class="section" style="text-align:center; font-size:1.2em; color:#2c3e50;">
   <strong>Electronics Engineer | Embedded Systems Developer | PCB & CAD Designer</strong>
 </div>
 
