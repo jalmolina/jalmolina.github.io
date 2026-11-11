@@ -37,6 +37,8 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
 - Implementación de **RTOS en microcontroladores** para control en tiempo real.  
 
 ## ⚙️ Proyectos Destacados
+👉 **[Ver portfolio completo](portfolio)**
+
 - **PCB de activación de válvulas con circuito Spike & Hold y ESP32**  
   Diseño en **Altium Designer** bajo normas IPC, desarrollo de firmware en **C** para control de válvulas de alta eficiencia.
 
