@@ -46,7 +46,7 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
   Implementación de un sistema de monitoreo en tiempo real para variables de proceso, integrando hardware de adquisición y visualización en LabVIEW.
 
 - **Sistema de seguimiento para colector térmico solar con myRIO y LabVIEW**  
-  Diseño mecánico en **SolidWorks**, simulación de movimiento, modelamiento del sistema en **LabVIEW** y desarrollo del controlador para **myRIO**.
+  Diseño mecánico en **Solid Edge**, simulación de movimiento, modelamiento del sistema en **LabVIEW** y desarrollo del controlador para **myRIO**.
 
 - **Diseño de CNC para mostrador y escaparate**  
   Modelado completo en **Solid Edge** y desarrollo del controlador de posición con **STM32**, integrando firmware embebido y control de motores.
