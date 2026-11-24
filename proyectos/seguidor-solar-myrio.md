@@ -10,7 +10,7 @@ title: "Colector solar cilindro-parabólico con seguimiento"
 Proyecto de grado, Ingeniería Electrónica, Universidad Mayor de San Andrés.  
 Mecánica en Solid Edge ST7, control y adquisición en LabVIEW sobre NI myRIO, modelado en MATLAB/Simulink. Prototipo construido y probado en campo.
 
-![Ensamble del colector, vista isométrica](../assets/img/seguidor-solar-myrio/ensamble-colector-iso.jpg)
+![Ensamble del colector, vista isométrica](../assets/img/seguidor-solar-myrio/ensamble-colector-iso.jpg){: width="520"}
 
 ## Resumen
 
@@ -26,9 +26,9 @@ Todo el conjunto gira sobre un eje principal montado en chumaceras. Diseñé una
 
 Pasé por tres versiones del colector, dos de los soportes al piso y tres del motorreductor. Para la estructura comparé la masa con tres maderas: 1,8 kg con balsa, 2,8 kg con mapajo y 4,5 kg con la madera disponible en el taller, incluida la plancha acrílica.
 
-![Vista desde el lado del reflector](../assets/img/seguidor-solar-myrio/ensamble-colector-frontal.jpg)
+![Vista desde el lado del reflector](../assets/img/seguidor-solar-myrio/ensamble-colector-frontal.jpg){: width="560"}
 
-![Motor DC y caja reductora](../assets/img/seguidor-solar-myrio/motorreductor.jpg)
+![Motor DC y caja reductora](../assets/img/seguidor-solar-myrio/motorreductor.jpg){: width="520"}
 
 ## Modelo y control
 
@@ -41,7 +41,7 @@ x2' = -(B/J)·x2 + (M·g·L/J)·sin(x1)
 
 El retrato de fase muestra un punto de silla en 0 rad y centros en ±π. La posición de trabajo es inestable: sin par del motor, el colector cae hacia uno de los lados. Por eso el controlador tiene que sostener la posición además de seguir la referencia.
 
-![Retrato de fase del modelo](../assets/img/seguidor-solar-myrio/diagrama-fases.png)
+![Retrato de fase del modelo](../assets/img/seguidor-solar-myrio/diagrama-fases.png){: width="640"}
 
 La propuesta inicial era un PID adaptativo. Las simulaciones mostraron que la saturación del actuador lo hacía fallar, y el anti-windup no alcanzó para corregirlo. Lo cambié por realimentación de estados más un PID con modelo de referencia. El proceso fue el de siempre: identificar los parámetros de la planta, linealizar el modelo, diseñar el controlador y validarlo en Simulink antes de pasarlo al hardware.
 
@@ -55,19 +55,19 @@ El lazo cerrado combina tres medidas:
 
 El programa está repartido entre la FPGA y el procesador de tiempo real de la myRIO. La FPGA lee el encoder, genera el PWM del puente H y mide la corriente. El procesador de tiempo real calcula los ángulos solares y el mediodía solar, sincroniza el reloj con NIST, lee la IMU y ejecuta el lazo de posición.
 
-![Diagrama de bloques: control de velocidad con encoder y lectura de corriente](../assets/img/seguidor-solar-myrio/labview-control-velocidad.jpg)
+![Diagrama de bloques: control de velocidad con encoder y lectura de corriente](../assets/img/seguidor-solar-myrio/labview-control-velocidad.jpg){: width="720"}
 
 ## Resultados
 
 En un día completo de prueba, el colector fue de −88° cerca de las 06:50 a +73° a las 17:00. Al inicio y al final del día trabaja en "modo reloj", con la posición calculada a partir de la hora. En seguimiento, el error se mantuvo casi siempre dentro de ±0,2°.
 
-![Posición del colector y error de seguimiento durante un día](../assets/img/seguidor-solar-myrio/seguimiento-error-dia.png)
+![Posición del colector y error de seguimiento durante un día](../assets/img/seguidor-solar-myrio/seguimiento-error-dia.png){: width="760"}
 
 En la prueba térmica, entre las 08:24 y las 15:13, el agua entró al receptor a 12-21 °C y salió con picos de 85 °C alrededor de las 13:20. El caudal varió entre 0,45 y 1,27 ml/s.
 
-![Temperatura de entrada y salida del receptor](../assets/img/seguidor-solar-myrio/temperatura-receptor.png)
+![Temperatura de entrada y salida del receptor](../assets/img/seguidor-solar-myrio/temperatura-receptor.png){: width="700"}
 
-![Caudal de agua en el receptor](../assets/img/seguidor-solar-myrio/flujo-agua.png)
+![Caudal de agua en el receptor](../assets/img/seguidor-solar-myrio/flujo-agua.png){: width="700"}
 
 El reflector concentró bien la radiación, pero el rendimiento térmico fue bajo. El receptor no tenía revestimiento selectivo ni envolvente de vidrio al vacío, así que perdía buena parte del calor por convección y radiación. Es lo primero que cambiaría en una segunda versión.
 

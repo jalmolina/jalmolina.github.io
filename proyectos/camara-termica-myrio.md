@@ -10,7 +10,7 @@ title: "Cámara térmica con MLX90640 y NI myRIO"
 Proyecto personal.  
 Sensor infrarrojo Melexis MLX90640 por I2C, procesamiento en LabVIEW Real-Time sobre NI myRIO.
 
-<video src="../assets/img/camara-termica-myrio/persona-saludando.mp4" autoplay loop muted playsinline width="640"></video>
+<video src="../assets/img/camara-termica-myrio/persona-saludando.mp4" autoplay loop muted playsinline width="480"></video>
 
 ## Resumen
 
@@ -31,9 +31,9 @@ Cada función de la librería original quedó como un subVI separado (DEVICE STA
 
 Probé la cámara con objetos fríos y calientes contra fondos distintos: la llama de un encendedor, cubitos de hielo, carne congelada, una botella fría, una mano y una persona saludando frente al sensor.
 
-<video src="../assets/img/camara-termica-myrio/llama-encendedor.mp4" autoplay loop muted playsinline width="640"></video>
+<video src="../assets/img/camara-termica-myrio/llama-encendedor.mp4" autoplay loop muted playsinline width="480"></video>
 
-<video src="../assets/img/camara-termica-myrio/cubitos-hielo.mp4" autoplay loop muted playsinline width="640"></video>
+<video src="../assets/img/camara-termica-myrio/cubitos-hielo.mp4" autoplay loop muted playsinline width="480"></video>
 
 | | |
 |---|---|
