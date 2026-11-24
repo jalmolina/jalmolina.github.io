@@ -18,7 +18,6 @@ Proyectos de diseño electrónico, sistemas embebidos y CAD 3D.
 | [CNC para mostrador y escaparate](proyectos/cnc-mostrador-stm32) | CAD 3D · Embebidos | Solid Edge, STM32 |
 | [Modelado 3D de gabinetes electrónicos](proyectos/gabinetes-3d) | CAD 3D | Solid Edge, SolidWorks |
 | [Simulación de sistemas de control](proyectos/simulacion-control-matlab) | Control · Simulación | MATLAB/Simulink |
-| [Diseño y simulación de ensambles: dron](proyectos/ensamble-dron) | CAD 3D · Curso (2025) | SolidWorks, Inventor |
 
 ## Por área
 ### 🔌 PCB
@@ -38,4 +37,3 @@ Proyectos de diseño electrónico, sistemas embebidos y CAD 3D.
 - [CNC para mostrador y escaparate](proyectos/cnc-mostrador-stm32)
 - [Colector solar cilindro-parabólico con seguimiento](proyectos/seguidor-solar-myrio)
 - [Modelado 3D de gabinetes electrónicos](proyectos/gabinetes-3d)
-- [Diseño y simulación de ensambles: dron](proyectos/ensamble-dron)
