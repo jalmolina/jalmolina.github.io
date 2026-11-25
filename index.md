@@ -28,8 +28,8 @@ Experiencia en microcontroladores **Arduino, STM32, PIC y ESP32**, desarrollo en
 Apasionado por crear soluciones robustas, documentadas y listas para producción.
 
 ## 🔧 Áreas de especialización
-- Diseño y análisis de **PCBs con Altium Designer**, bajo normas IPC.  
 - Programación de sistemas embebidos con **Arduino, STM32, PIC, ESP32**.  
+- Diseño y análisis de **PCBs con Altium Designer**, bajo normas IPC.  
 - Desarrollo de aplicaciones de control y adquisición de datos con **LabVIEW**.  
 - Modelamiento y simulación de sistemas mecánicos con **LabVIEW y MATLAB**.  
 - Simulación de sistemas embebidos con **Proteus**.  
@@ -37,25 +37,30 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
 - Implementación de **RTOS en microcontroladores** para control en tiempo real.  
 
 ## ⚙️ Proyectos Destacados
-👉 **[Ver proyectos documentados](portfolio)**
+👉 **[Ver todos los proyectos](portfolio)**
 
 - **[Control de motores con STM32: stepper y servo](proyectos/control-motores-stm32)**  
   Firmware en **C con HAL** sobre STM32F446: pulsos STEP por timer e interrupción, PWM del servo y protocolo binario por UART. Incluye driver propio para pantalla TFT ST7789 por SPI + DMA.
 
+- **[PCB de activación de válvulas con circuito Spike & Hold y ESP32](proyectos/pcb-spike-hold-esp32)**  
+  Diseño en **Altium Designer** según IPC-2221, aislamiento óptico y etapa de potencia para válvulas de 24 V. Placa fabricada y probada.
+
 - **[Domótica IoT con ESP32, MQTT y LabVIEW](proyectos/esp32-mqtt-labview)**  
   **ESP32 con MicroPython** que publica un sensor por **MQTT** y recibe órdenes de paneles en **LabVIEW**. También con servidor web, BLE y REST.
 
-- **[PCB de activación de válvulas con circuito Spike & Hold y ESP32](proyectos/pcb-spike-hold-esp32)**  
-  Diseño en **Altium Designer** según IPC-2221, aislamiento óptico y etapa de potencia para válvulas de 24 V. Placa fabricada y probada.
+- **[Sistema de seguimiento para colector térmico solar con myRIO y LabVIEW](proyectos/seguidor-solar-myrio)**  
+  Prototipo construido y probado en campo: control de posición con realimentación de estados y PID sobre **NI myRIO** (LabVIEW RT y FPGA), cámara Pixy2 e IMU BMX055. Mecánica en **Solid Edge**.
+
+### Otros proyectos
 
 - **[Instrumentación y adquisición de datos con LabVIEW y myRIO](proyectos/instrumentacion-myrio-labview)**  
   Driver propio del IMU **BMX055** por I2C con filtro complementario y Savitzky-Golay, tacómetro en **FPGA** y reloj sincronizado con NIST, en **LabVIEW** sobre **NI myRIO**.
 
-- **[Sistema de seguimiento para colector térmico solar con myRIO y LabVIEW](proyectos/seguidor-solar-myrio)**  
-  Diseño mecánico en **Solid Edge**, simulación de movimiento, modelamiento del sistema en **LabVIEW** y desarrollo del controlador para **myRIO**.
-
 - **[Cámara térmica con sensor MLX90640 y myRIO](proyectos/camara-termica-myrio)**  
   Traducción a **LabVIEW** de la librería de calibración del sensor, lectura por **I2C** y visualización en tiempo real.
+
+- **[Simulación de sistemas de control](proyectos/simulacion-control-matlab)**  
+  Identificación de un motor DC, modelo no lineal del colector solar, realimentación de estados y PID de dos grados de libertad en **MATLAB/Simulink** y **LabVIEW**.
 
 - **[Máquina de 3 ejes para un escaparate](proyectos/cnc-escaparate)**  
   Tres versiones: **PIC16F877A** en C con interpolación lineal, **Arduino** con drivers STEP/DIR y rediseño mecánico completo en **Solid Edge**.
@@ -63,12 +68,9 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
 - **[Diseño mecánico en CAD 3D](proyectos/diseno-mecanico-cad)**  
   Rack de telecomunicaciones en chapa y silla escalera, en **Solid Edge**.
 
-- **[Simulación de sistemas de control](proyectos/simulacion-control-matlab)**  
-  Identificación de un motor DC, modelo no lineal del colector solar, realimentación de estados y PID de dos grados de libertad en **MATLAB/Simulink** y **LabVIEW**.
-
 ## 🛠️ Habilidades Técnicas
 - **Lenguajes:** C, C++, Python, Ladder, MATLAB, LabVIEW.  
-- **Microcontroladores:** Arduino, PIC, STM32, ESP32.  
+- **Microcontroladores:** STM32, ESP32, PIC, Arduino.  
 - **PCB & Electrónica:** Altium Designer, Proteus, MultiSim, EasyEDA.  
 - **CAD 3D:** Solid Edge, SolidWorks, Inventor.  
 - **Control & Simulación:** LabVIEW, MATLAB/Simulink, RTOS.  
