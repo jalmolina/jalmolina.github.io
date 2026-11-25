@@ -30,11 +30,11 @@ Para la segunda versión empecé con un boceto a mano de la idea: tres señales 
 
 El circuito final funciona así:
 
-- K1 elige el riel de alimentación de la válvula: 24 V para el pico o 5 V para el mantenimiento. Los Schottky 1N5819 evitan que un riel se alimente desde el otro.
-- K2 conecta ese riel a la válvula.
-- Un Darlington TIP120 cierra el lado bajo de la válvula. Un Schottky en paralelo con la bobina descarga la energía al apagar.
-- Las tres entradas pasan por optoacopladores PC817, así el ESP32 queda aislado del lado de 24 V. Las bobinas de los relés llevan su diodo 1N4007.
-- Un LM7805 baja los 24 V a 5 V para la lógica. La placa tiene entradas separadas de 24 VDC y 5 VDC, dos pulsadores de mando local y 13 puntos de prueba para medir cada etapa.
+- **Enclavamiento y mantenimiento (K1).** Para abrir la válvula, K1 le aplica primero 24 V. Unos milisegundos después conmuta al riel de 5 V, y la válvula se queda así, con menos consumo, hasta que haya que cambiar su estado. Los Schottky 1N5819 evitan que un riel se alimente desde el otro.
+- **Apagado (K2).** El segundo relé desactiva todo abriendo el lazo de retorno a tierra de la válvula.
+- **Lado bajo y protección.** Un Darlington TIP120 conmuta el lado bajo de la válvula. Un Schottky en paralelo con la bobina descarga su energía al apagar.
+- **Aislamiento.** Las tres entradas pasan por optoacopladores PC817, así el ESP32 queda aislado del lado de 24 V. Las bobinas de los relés llevan su diodo 1N4007.
+- **Alimentación y pruebas.** Un LM7805 baja los 24 V a 5 V para la lógica. La placa tiene entradas separadas de 24 VDC y 5 VDC, dos pulsadores de mando local y 13 puntos de prueba para medir cada etapa.
 
 ![Esquemático de la etapa de potencia](../assets/img/pcb-spike-hold-esp32/esquema-etapa-potencia.png){: width="760"}
 

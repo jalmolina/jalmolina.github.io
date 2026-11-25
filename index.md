@@ -60,11 +60,11 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
 - **[Máquina de 3 ejes para un escaparate](proyectos/cnc-escaparate)**  
   Tres versiones: **PIC16F877A** en C con interpolación lineal, **Arduino** con drivers STEP/DIR y rediseño mecánico completo en **Solid Edge**.
 
-- **[Modelado 3D de gabinetes electrónicos](proyectos/diseno-mecanico-cad)**  
-  Diseño de gabinetes y carcasas en **Solid Edge** y **SolidWorks**, optimizados para manufactura y montaje electrónico.
+- **[Diseño mecánico en CAD 3D](proyectos/diseno-mecanico-cad)**  
+  Rack de telecomunicaciones en chapa y silla escalera, en **Solid Edge**.
 
-- **Simulación de sistemas de control**  
-  Modelado y validación de sistemas dinámicos en **MATLAB/Simulink**, con pruebas en hardware embebido.
+- **[Simulación de sistemas de control](proyectos/simulacion-control-matlab)**  
+  Identificación de un motor DC, modelo no lineal del colector solar, realimentación de estados y PID de dos grados de libertad en **MATLAB/Simulink** y **LabVIEW**.
 
 ## 🛠️ Habilidades Técnicas
 - **Lenguajes:** C, C++, Python, Ladder, MATLAB, LabVIEW.  
@@ -75,7 +75,6 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
 
 ## 🎓 Formación y Certificaciones
 - **Ingeniería Electrónica – Univ. Mayor de San Andrés** (Mención en Sistemas de Control).  
-- Curso de **Diseño y simulación de ensambles mediante SolidWorks e Inventor** (2025) con énfasis en el diseño de drones. 
 - Curso de **Diseño de PCBs con Altium bajo normas IPC** (2024).  
 - Curso de **IoT con Python – Cisco** (2023).  
 - **LabVIEW Core 1 – National Instruments** (2020).  

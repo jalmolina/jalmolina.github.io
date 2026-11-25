@@ -34,11 +34,11 @@ A cada salida le aplico un filtro de Savitzky-Golay con el tamaño de ventana y 
 
 ![Diagrama de bloques del inclinómetro](../assets/img/daq-myrio-labview/diagrama-bmx055.png)
 
-El proyecto pasó por cuatro versiones: una primera lectura del módulo, una de calibración, el inclinómetro y el inclinómetro avanzado con fusión y filtro. Hice lo mismo con un MPU6050, con un driver propio en lugar del demo de NI. El BMX055 fue el que quedó como sensor de inclinación del colector solar.
+El proyecto pasó por cuatro versiones: una primera lectura del módulo, una de calibración, el inclinómetro y el inclinómetro avanzado con fusión y filtro. El BMX055 fue el que quedó como sensor de inclinación del colector solar.
 
 ## Tacómetro en la FPGA
 
-Para medir la velocidad de motores con encoder adapté a la myRIO un ejemplo de tacómetro de NI pensado para CompactRIO. La FPGA cuenta el tiempo entre flancos del encoder con un reloj de 40 MHz y filtra con histéresis los falsos disparos, y el procesador de tiempo real convierte el período en RPM. Con esto obtuve las curvas de velocidad que usé para identificar los parámetros del motor DC del colector.
+Para medir la velocidad de motores con encoder adapté a la myRIO un ejemplo de tacómetro de NI pensado para CompactRIO. La FPGA cuenta el tiempo entre flancos del encoder con un reloj de 40 MHz y filtra con histéresis los falsos disparos, y el procesador de tiempo real convierte el período en RPM. La velocidad de la FPGA permite medir con buena resolución incluso movimientos pequeños del motor. Con esto obtuve las curvas de velocidad que usé para identificar los parámetros del motor DC del colector.
 
 ## Reloj sincronizado con NIST
 
@@ -50,4 +50,4 @@ Dicto cursos de introducción a LabVIEW para profesionales y estudiantes de inge
 
 ## Herramientas
 
-LabVIEW (RT y FPGA) · NI myRIO · I2C · Bosch BMX055 · MPU6050 · encoders incrementales
+LabVIEW (RT y FPGA) · NI myRIO · I2C · Bosch BMX055 · encoders incrementales
