@@ -39,6 +39,9 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
 ## ⚙️ Proyectos Destacados
 👉 **[Ver proyectos documentados](portfolio)**
 
+- **[Control de motores con STM32: stepper y servo](proyectos/control-motores-stm32)**  
+  Firmware en **C con HAL** sobre STM32F446: pulsos STEP por timer e interrupción, PWM del servo y protocolo binario por UART. Incluye driver propio para pantalla TFT ST7789 por SPI + DMA.
+
 - **[PCB de activación de válvulas con circuito Spike & Hold y ESP32](proyectos/pcb-spike-hold-esp32)**  
   Diseño en **Altium Designer** según IPC-2221, aislamiento óptico y etapa de potencia para válvulas de 24 V. Placa fabricada y probada.
 
