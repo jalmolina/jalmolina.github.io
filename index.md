@@ -54,8 +54,8 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
 - **[Cámara térmica con sensor MLX90640 y myRIO](proyectos/camara-termica-myrio)**  
   Traducción a **LabVIEW** de la librería de calibración del sensor, lectura por **I2C** y visualización en tiempo real.
 
-- **Diseño de CNC para mostrador y escaparate**  
-  Modelado completo en **Solid Edge** y desarrollo del controlador de posición con **STM32**, integrando firmware embebido y control de motores.
+- **[Máquina de 3 ejes para un escaparate](proyectos/cnc-escaparate)**  
+  Tres versiones: **PIC16F877A** en C con interpolación lineal, **Arduino** con drivers STEP/DIR y rediseño mecánico completo en **Solid Edge**.
 
 - **[Modelado 3D de gabinetes electrónicos](proyectos/diseno-mecanico-cad)**  
   Diseño de gabinetes y carcasas en **Solid Edge** y **SolidWorks**, optimizados para manufactura y montaje electrónico.
