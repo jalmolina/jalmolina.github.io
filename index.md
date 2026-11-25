@@ -48,8 +48,8 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
 - **[PCB de activación de válvulas con circuito Spike & Hold y ESP32](proyectos/pcb-spike-hold-esp32)**  
   Diseño en **Altium Designer** según IPC-2221, aislamiento óptico y etapa de potencia para válvulas de 24 V. Placa fabricada y probada.
 
-- **Sistema de adquisición de datos con myRIO y LabVIEW**  
-  Implementación de un sistema de monitoreo en tiempo real para variables de proceso, integrando hardware de adquisición y visualización en LabVIEW.
+- **[Instrumentación y adquisición de datos con LabVIEW y myRIO](proyectos/instrumentacion-myrio-labview)**  
+  Driver propio del IMU **BMX055** por I2C con filtro complementario y Savitzky-Golay, tacómetro en **FPGA** y reloj sincronizado con NIST, en **LabVIEW** sobre **NI myRIO**.
 
 - **[Sistema de seguimiento para colector térmico solar con myRIO y LabVIEW](proyectos/seguidor-solar-myrio)**  
   Diseño mecánico en **Solid Edge**, simulación de movimiento, modelamiento del sistema en **LabVIEW** y desarrollo del controlador para **myRIO**.
