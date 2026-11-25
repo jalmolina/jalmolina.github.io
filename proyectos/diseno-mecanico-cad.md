@@ -19,7 +19,7 @@ Del conjunto de bisagras traseras hice un plano con cotas: bisagra A, bisagra B 
 
 ![Rack de pared, vista frontal con puerta y ventilación lateral](../assets/img/diseno-mecanico-cad/rack-pared-frente.jpg){: width="520"}
 
-![Rack de pared, vista posterior con pasacables](../assets/img/diseno-mecanico-cad/rack-pared-posterior.jpg){: width="520"}
+![Rack de pared, vista posterior con las bisagras traseras](../assets/img/diseno-mecanico-cad/rack-pared-posterior.jpg){: width="520"}
 
 ## Silla escalera
 
