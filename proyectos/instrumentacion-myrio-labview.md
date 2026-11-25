@@ -14,16 +14,27 @@ Varias de estas piezas terminaron dentro del [colector solar con seguimiento](se
 
 ## Inclinómetro con BMX055
 
-El BMX055 de Bosch tiene acelerómetro, giróscopo y magnetómetro en un solo encapsulado. Lo conecté a la myRIO por I2C y armé en LabVIEW la cadena completa: lectura de los datos crudos por I2C y conversión a unidades físicas, con un sub-VI que pasa el acelerómetro a *g* y otro que pasa el giróscopo a °/s.
+El BMX055 de Bosch tiene acelerómetro, giróscopo y magnetómetro en un solo encapsulado. Lo conecté a la myRIO por I2C en modo rápido (400 kbit/s) y escribí el driver en LabVIEW a partir de la hoja de datos, sin librerías de terceros.
 
-Con esos datos calculo la inclinación de dos maneras y las grafico juntas:
+**Configuración.** Al arrancar, el programa escribe los registros de cada sensor:
 
-- solo con el acelerómetro, que es exacta en reposo pero ruidosa cuando hay vibración;
-- combinando acelerómetro y giróscopo, que responde mejor al movimiento.
+| Sensor | Dirección I2C | Rango | Filtro | Otros |
+|---|---|---|---|---|
+| Acelerómetro | `0x18` | ±2 *g* | pasa bajos de 500 Hz | modo normal, *shadowing* activo |
+| Giróscopo | `0x68` | ±500 °/s | pasa bajos de 230 Hz | compensación lenta de *offset* en el eje X |
 
-Encima de eso apliqué un filtro de Savitzky-Golay con el tamaño de ventana y el orden del polinomio ajustables desde el panel. Este filtro suaviza la señal sin aplanar los cambios rápidos como lo haría un promedio móvil. Con la configuración por defecto el retardo inicial es de unos 80 ms. Un indicador muestra si el eje está en posición horizontal.
+**Lectura.** Un lazo temporizado corre cada 10 ms (100 Hz). En cada ciclo lee en una sola transacción los tres ejes de 16 bits de cada sensor y los pasa a *g* y a °/s según la escala programada.
 
-El proyecto pasó por cuatro versiones: una primera lectura del módulo, una de calibración, el inclinómetro y el inclinómetro avanzado con fusión y filtro. Hice lo mismo con un MPU6050, escribiendo mi propio driver en lugar de usar el demo de NI. El BMX055 en rango de ±2 *g* fue el que quedó como sensor de inclinación del colector solar.
+**Cálculo de la inclinación.** La inclinación sale por dos caminos que se grafican juntos:
+
+- Solo con el acelerómetro, a partir de la dirección de la gravedad con funciones trigonométricas. Es exacta en reposo, pero ruidosa con vibración.
+- Con un **filtro complementario**: integro la velocidad angular del giróscopo, previamente filtrada con un pasa bajos, y la combino con el ángulo del acelerómetro con un peso β = 0,85. El giróscopo aporta respuesta rápida y el acelerómetro corrige la deriva de la integral.
+
+A cada salida le aplico un filtro de Savitzky-Golay con el tamaño de ventana y el orden del polinomio ajustables desde el panel. Suaviza la señal sin aplanar los cambios rápidos como lo haría un promedio móvil. Con la configuración por defecto el retardo inicial es de unos 80 ms. Cuando la inclinación queda dentro de ±0,01 rad, el programa enciende un LED de la myRIO y un indicador en el panel para avisar que el eje está horizontal.
+
+![Diagrama de bloques del inclinómetro](../assets/img/daq-myrio-labview/diagrama-bmx055.png)
+
+El proyecto pasó por cuatro versiones: una primera lectura del módulo, una de calibración, el inclinómetro y el inclinómetro avanzado con fusión y filtro. Hice lo mismo con un MPU6050, con un driver propio en lugar del demo de NI. El BMX055 fue el que quedó como sensor de inclinación del colector solar.
 
 ## Tacómetro en la FPGA
 
