@@ -18,7 +18,7 @@ La máquina tenía que mover un muñeco dentro de un escaparate: ubicarlo en el 
 
 ## Versión 1: PIC16F877A en C
 
-Tres motores paso a paso unipolares, dos para los ejes X e Y y un tercero de giro con pasos de 7,5°. Cada motor se maneja con cuatro líneas de un puerto del PIC. El firmware, en C con el compilador CCS, genera la secuencia de fases rotando un patrón de bits.
+Tres motores paso a paso unipolares: dos para los ejes X e Y y un tercero que gira en pasos de 7,5°. Cada motor se maneja con cuatro líneas de un puerto del PIC. El firmware, en C con el compilador CCS, genera la secuencia de fases rotando un patrón de bits.
 
 La parte interesante es `go_to(x, y)`, que lleva el cabezal de un punto a otro **en línea recta** sobre un área de 920 × 1290 pasos. Avanza un paso en el eje que más recorre y calcula cuánto le toca al otro con la pendiente, redondeando al paso entero más cercano. Antes de grabar el PIC comprobé el algoritmo en una planilla y simulé los motores en Proteus.
 
@@ -46,7 +46,7 @@ if (abs(delta_x) >= abs(delta_y))
 
 La secuencia de trabajo combina movimientos `go_to()` con giros del tercer motor, y un pulsador la inicia y la reanuda.
 
-La mecánica de esta versión aprovechó piezas recicladas: un tornillo con su tuerca guía y rieles de equipos viejos, poleas y correas dentadas, y chapa de aluminio para el carro.
+La mecánica de esta versión se armó en buena parte con piezas recicladas de otros equipos.
 
 | | |
 |---|---|

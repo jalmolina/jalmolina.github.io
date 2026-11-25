@@ -19,7 +19,7 @@ Proyectos de diseño electrónico, sistemas embebidos y CAD 3D.
 | [Domótica IoT con ESP32, MQTT y LabVIEW](proyectos/esp32-mqtt-labview) | IoT · Embebidos | ESP32, MicroPython, MQTT, LabVIEW |
 | [Máquina de 3 ejes para un escaparate](proyectos/cnc-escaparate) | Embebidos · Mecánica | PIC16F877A, Arduino, Solid Edge |
 | [Diseño mecánico en CAD 3D](proyectos/diseno-mecanico-cad) | CAD 3D | Solid Edge |
-| [Simulación de sistemas de control](proyectos/simulacion-control-matlab) | Control · Simulación | MATLAB/Simulink |
+| [Simulación de sistemas de control](proyectos/simulacion-control-matlab) | Control · Simulación | MATLAB, Simulink, LabVIEW, Python |
 
 ## Por área
 ### 🔌 PCB
