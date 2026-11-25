@@ -54,6 +54,15 @@ Del lado de la PC hay dos VIs con el cliente MQTT que se instala con VI Package 
 
 Antes de integrar todo hice dos pruebas funcionales: primero el ESP32 con el sensor solo, y después el sensor publicando por MQTT hacia LabVIEW.
 
+| | |
+|---|---|
+| ![Panel de control de distancia con alarma](../assets/img/esp32-mqtt-labview/panel-control-distancia.png) | ![Panel de control del LED RGB](../assets/img/esp32-mqtt-labview/panel-control-rgb.png) |
+| Control de distancia: gráfico, alarma de distancia peligrosa y estado de publicación | Control RGB: una perilla por canal |
+
+![Panel de la prueba funcional de lectura de distancia](../assets/img/esp32-mqtt-labview/panel-prueba-distancia.png){: width="560"}
+
+Los paneles tienen botones para conectarse al broker y suscribirse, indicadores de confirmación del broker (SUBACK / UNSUBACK) y el *cluster* de error de LabVIEW para ver fallas de conexión.
+
 ## El mismo sensor, otras vías
 
 Con el mismo ESP32 y el mismo HC-SR04 probé otras formas de sacar los datos:
