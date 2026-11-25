@@ -1,49 +1,51 @@
 ---
 layout: default
-title: "PCB de activación de válvulas (Spike & Hold + ESP32)"
+title: "PCB de activación de válvulas solenoide (Spike & Hold + ESP32)"
 ---
 
 [← Volver al portfolio](../portfolio)
 
-# PCB de activación de válvulas (Spike & Hold + ESP32)
+# PCB de activación de válvulas solenoide (Spike & Hold + ESP32)
 
-**Categoría:** PCB · Embebidos  
-**Herramientas:** Altium Designer, IPC, C (ESP32)  
-**Estado:** 🚧 borrador — completar `[COMPLETAR]`
+Trabajo para un cliente.  
+Diseño del circuito y de la placa en Altium Designer, con control desde un ESP32.
 
-## Resumen
-PCB para accionar válvulas solenoides con circuito Spike & Hold (corriente alta de apertura, corriente baja de mantenimiento), controlada por ESP32.
+![Placa, cara superior (render de los Gerbers)](../assets/img/pcb-spike-hold-esp32/pcb-top.jpg){: width="760"}
 
-## Mi rol
-- [COMPLETAR] ¿Trabajo individual o en equipo? ¿Cliente, empresa, universidad, curso, personal?
-- [COMPLETAR] Año / duración.
+## El problema
 
-## Qué hice
-- Esquemático
-- Layout de PCB (stack-up, ruteo, planos)
-- Normas IPC
-- Firmware en C
+Una válvula solenoide de 24 V de un equipo industrial necesita un pulso corto a 24 V para abrir (unos 13 ms, según el fabricante) y después solo entre 3 y 5 V para quedarse abierta. Es la técnica *spike & hold*: el pico de corriente vence la inercia del núcleo y el voltaje bajo de mantenimiento reduce el calentamiento y el consumo de la bobina. Cuando el voltaje desaparece, el núcleo vuelve y la válvula se cierra.
 
-## Problema y requisitos
-[COMPLETAR] ¿Qué había que resolver? Cifras: tensión, corriente, carrera, precisión, tamaño, costo.
+## Primera versión
 
-## Decisiones de diseño
-[COMPLETAR] 2-3 decisiones clave y por qué (componentes, material, topología, algoritmo).
+La primera versión usaba un PIC12F629 programado en C con dos pulsadores, MOSFET IRF540 e IRF9540 para conmutar entre 24 V y 5 V, y un regulador 7805 para la lógica. Antes de armarla en protoboard la simulé en Multisim, Proteus y PSpice, con una variante a transistores bipolares y otra con MOSFET.
 
-## Resultados
-[COMPLETAR] Qué funcionó, qué medí, qué aprendí.
+![Simulación en PSpice de la primera versión](../assets/img/pcb-spike-hold-esp32/v1-simulacion-pspice.png){: width="720"}
 
-## Stack
-- Altium Designer
-- ESP32
-- C
-- Normas IPC
+## Segunda versión: del boceto a la placa
 
-## Galería
-Guardar imágenes en `assets/img/pcb-spike-hold-esp32/`.
+Para la segunda versión empecé con un boceto a mano de la idea: tres señales del microcontrolador, cada una aislada con un optoacoplador, que manejan dos relés y un transistor.
 
-- [ ] Esquemático (PDF)
-- [ ] Vista 3D de la placa
-- [ ] Layout top/bottom
-- [ ] Foto de placa ensamblada
-- [ ] Forma de onda spike & hold (osciloscopio)
+![Boceto del concepto](../assets/img/pcb-spike-hold-esp32/boceto-concepto.png){: width="560"}
+
+El circuito final funciona así:
+
+- K1 elige el riel de alimentación de la válvula: 24 V para el pico o 5 V para el mantenimiento. Los Schottky 1N5819 evitan que un riel se alimente desde el otro.
+- K2 conecta ese riel a la válvula.
+- Un Darlington TIP120 cierra el lado bajo de la válvula. Un Schottky en paralelo con la bobina descarga la energía al apagar.
+- Las tres entradas pasan por optoacopladores PC817, así el ESP32 queda aislado del lado de 24 V. Las bobinas de los relés llevan su diodo 1N4007.
+- Un LM7805 baja los 24 V a 5 V para la lógica. La placa tiene entradas separadas de 24 VDC y 5 VDC, dos pulsadores de mando local y 13 puntos de prueba para medir cada etapa.
+
+![Esquemático de la etapa de potencia](../assets/img/pcb-spike-hold-esp32/esquema-etapa-potencia.png){: width="760"}
+
+## La placa
+
+La placa es de dos capas y mide 111 × 65 mm. El ESP32-DevKitC de 38 pines va enchufado en dos tiras hembra, así se cambia sin desoldar. Mezcla componentes de inserción (relés, TO-220, borneras, electrolíticos) con resistencias SMD 0805. El ruteo separa la zona de lógica, a la izquierda, de la zona de potencia y los relés, a la derecha. Las borneras de entrada y la salida a la válvula quedan en el borde.
+
+Hice una primera prueba en KiCad y el diseño final en Altium, con librerías propias, BOM y Gerbers. Los Gerbers pasaron por una revisión, de la 1.0 a la 1.1.
+
+![Placa, cara inferior](../assets/img/pcb-spike-hold-esp32/pcb-bottom.jpg){: width="760"}
+
+## Herramientas
+
+Altium Designer · KiCad · PSpice (OrCAD) · Multisim · Proteus · ESP32 · PIC12F629 (versión anterior)

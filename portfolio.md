@@ -11,7 +11,7 @@ Proyectos de diseño electrónico, sistemas embebidos y CAD 3D.
 ## Índice
 | Proyecto | Área | Herramientas |
 |---|---|---|
-| [PCB de activación de válvulas (Spike & Hold + ESP32)](proyectos/pcb-spike-hold-esp32) | PCB · Embebidos | Altium Designer, IPC, C (ESP32) |
+| [PCB de activación de válvulas (Spike & Hold + ESP32)](proyectos/pcb-spike-hold-esp32) | PCB · Embebidos | Altium Designer, KiCad, PSpice, ESP32 |
 | [Adquisición de datos con myRIO y LabVIEW](proyectos/daq-myrio-labview) | Adquisición de datos · Control | LabVIEW, NI myRIO |
 | [Colector solar cilindro-parabólico con seguimiento](proyectos/seguidor-solar-myrio) | Control · CAD 3D | Solid Edge, LabVIEW, NI myRIO, Simulink |
 | [Cámara térmica con MLX90640 y NI myRIO](proyectos/camara-termica-myrio) | Adquisición de datos · Imagen | LabVIEW RT, NI myRIO, I2C |
