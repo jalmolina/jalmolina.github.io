@@ -73,11 +73,13 @@ Revisando el código con más experiencia, cambiaría cuatro cosas:
 3. **Protocolo más robusto.** La trama de 4 bytes no tiene checksum ni forma de resincronizarse si se pierde un byte. Agregaría un byte de inicio, un CRC y un *timeout* de recepción.
 4. **Unidades en el firmware.** La PC manda períodos de timer y valores crudos de PWM. Sería más claro mandar pasos/s y grados, y que el firmware haga la conversión y aplique límites.
 
-## Extra: driver propio para pantalla TFT ST7789
+## Extra: driver propio para pantalla TFT ST7789 (en desarrollo)
+
+*Proyecto personal todavía en desarrollo: sigo agregando funciones y corrigiendo lo que se describe abajo.*
 
 En otro proyecto con el mismo STM32F446RE escribí desde cero un driver para una pantalla TFT ST7789 de 240 × 240 por SPI a 45 Mbit/s. Tiene inicialización, ventana de dirección, píxeles, líneas, rectángulos, círculos y sectores circulares, conversión de RGB888 a RGB565 y envío de imágenes completas por DMA en bloques.
 
-Lo que mejoraría ahí: el envío por DMA espera a que termine cada bloque de 256 bytes, así que en la práctica sigue siendo bloqueante. Usaría bloques más grandes con el *callback* de fin de transferencia. Además, configurar el SPI en 16 bits evitaría invertir los bytes de cada píxel por software, y dibujar por franjas en vez de usar un *frame buffer* completo (115 KB de los 128 KB de RAM del F446) dejaría memoria libre para el resto de la aplicación.
+Lo que estoy mejorando: el envío por DMA espera a que termine cada bloque de 256 bytes, así que en la práctica sigue siendo bloqueante. Usaría bloques más grandes con el *callback* de fin de transferencia. Además, configurar el SPI en 16 bits evitaría invertir los bytes de cada píxel por software, y dibujar por franjas en vez de usar un *frame buffer* completo (115 KB de los 128 KB de RAM del F446) dejaría memoria libre para el resto de la aplicación.
 
 ## Herramientas
 
