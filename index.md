@@ -54,7 +54,7 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
 - **Diseño de CNC para mostrador y escaparate**  
   Modelado completo en **Solid Edge** y desarrollo del controlador de posición con **STM32**, integrando firmware embebido y control de motores.
 
-- **Modelado 3D de gabinetes electrónicos**  
+- **[Modelado 3D de gabinetes electrónicos](proyectos/diseno-mecanico-cad)**  
   Diseño de gabinetes y carcasas en **Solid Edge** y **SolidWorks**, optimizados para manufactura y montaje electrónico.
 
 - **Simulación de sistemas de control**  
