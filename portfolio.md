@@ -16,7 +16,7 @@ Proyectos de diseño electrónico, sistemas embebidos y CAD 3D.
 | [Colector solar cilindro-parabólico con seguimiento](proyectos/seguidor-solar-myrio) | Control · CAD 3D | Solid Edge, LabVIEW, NI myRIO, Simulink |
 | [Cámara térmica con MLX90640 y NI myRIO](proyectos/camara-termica-myrio) | Adquisición de datos · Imagen | LabVIEW RT, NI myRIO, I2C |
 | [CNC para mostrador y escaparate](proyectos/cnc-mostrador-stm32) | CAD 3D · Embebidos | Solid Edge, STM32 |
-| [Modelado 3D de gabinetes electrónicos](proyectos/gabinetes-3d) | CAD 3D | Solid Edge, SolidWorks |
+| [Diseño mecánico en CAD 3D](proyectos/diseno-mecanico-cad) | CAD 3D | Solid Edge |
 | [Simulación de sistemas de control](proyectos/simulacion-control-matlab) | Control · Simulación | MATLAB/Simulink |
 
 ## Por área
@@ -36,4 +36,4 @@ Proyectos de diseño electrónico, sistemas embebidos y CAD 3D.
 ### 🧩 Diseño mecánico CAD 3D
 - [CNC para mostrador y escaparate](proyectos/cnc-mostrador-stm32)
 - [Colector solar cilindro-parabólico con seguimiento](proyectos/seguidor-solar-myrio)
-- [Modelado 3D de gabinetes electrónicos](proyectos/gabinetes-3d)
+- [Diseño mecánico en CAD 3D](proyectos/diseno-mecanico-cad)
