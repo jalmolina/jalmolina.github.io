@@ -42,6 +42,9 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
 - **[Control de motores con STM32: stepper y servo](proyectos/control-motores-stm32)**  
   Firmware en **C con HAL** sobre STM32F446: pulsos STEP por timer e interrupción, PWM del servo y protocolo binario por UART. Incluye driver propio para pantalla TFT ST7789 por SPI + DMA.
 
+- **[Domótica IoT con ESP32, MQTT y LabVIEW](proyectos/esp32-mqtt-labview)**  
+  **ESP32 con MicroPython** que publica un sensor por **MQTT** y recibe órdenes de paneles en **LabVIEW**. También con servidor web, BLE y REST.
+
 - **[PCB de activación de válvulas con circuito Spike & Hold y ESP32](proyectos/pcb-spike-hold-esp32)**  
   Diseño en **Altium Designer** según IPC-2221, aislamiento óptico y etapa de potencia para válvulas de 24 V. Placa fabricada y probada.
 
