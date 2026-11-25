@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 430" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="14">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3b4a5a"/>
+    </marker>
+  </defs>
+  <rect width="960" height="430" fill="#ffffff"/>
+
+  <!-- ESP32 -->
+  <rect x="20" y="60" width="250" height="300" rx="10" fill="#eef4fb" stroke="#2c5d8f" stroke-width="2"/>
+  <text x="145" y="88" text-anchor="middle" font-weight="700" font-size="16" fill="#1d3f63">ESP32 · MicroPython</text>
+  <rect x="40" y="105" width="210" height="58" rx="6" fill="#fff" stroke="#8aa9c8"/>
+  <text x="145" y="128" text-anchor="middle" font-weight="600">HC-SR04</text>
+  <text x="145" y="148" text-anchor="middle" fill="#46586a" font-size="12.5">Trig D5 · Echo D18 · cada 150 ms</text>
+  <rect x="40" y="175" width="210" height="58" rx="6" fill="#fff" stroke="#8aa9c8"/>
+  <text x="145" y="198" text-anchor="middle" font-weight="600">LED RGB</text>
+  <text x="145" y="218" text-anchor="middle" fill="#46586a" font-size="12.5">3 × PWM 5 kHz, 16 bits</text>
+  <rect x="40" y="245" width="210" height="58" rx="6" fill="#fff" stroke="#8aa9c8"/>
+  <text x="145" y="268" text-anchor="middle" font-weight="600">LED de alarma</text>
+  <text x="145" y="288" text-anchor="middle" fill="#46586a" font-size="12.5">GPIO 2</text>
+  <text x="145" y="340" text-anchor="middle" fill="#46586a" font-size="12.5">Wi-Fi · cliente MQTT · reconexión</text>
+
+  <!-- Broker -->
+  <rect x="375" y="150" width="210" height="120" rx="10" fill="#fff6e8" stroke="#c07a12" stroke-width="2"/>
+  <text x="480" y="185" text-anchor="middle" font-weight="700" font-size="16" fill="#7a4b07">Broker MQTT</text>
+  <text x="480" y="208" text-anchor="middle" fill="#5e4a2c" font-size="13">broker público EMQX</text>
+  <text x="480" y="230" text-anchor="middle" fill="#5e4a2c" font-size="13">publicar / suscribir</text>
+
+  <!-- LabVIEW -->
+  <rect x="690" y="60" width="250" height="300" rx="10" fill="#eef8f0" stroke="#2f7d45" stroke-width="2"/>
+  <text x="815" y="88" text-anchor="middle" font-weight="700" font-size="16" fill="#1f5a31">PC · LabVIEW</text>
+  <rect x="710" y="110" width="210" height="80" rx="6" fill="#fff" stroke="#93c1a0"/>
+  <text x="815" y="135" text-anchor="middle" font-weight="600">Control Distancia.vi</text>
+  <text x="815" y="155" text-anchor="middle" fill="#46586a" font-size="12.5">muestra la distancia y</text>
+  <text x="815" y="173" text-anchor="middle" fill="#46586a" font-size="12.5">decide si hay peligro</text>
+  <rect x="710" y="215" width="210" height="80" rx="6" fill="#fff" stroke="#93c1a0"/>
+  <text x="815" y="240" text-anchor="middle" font-weight="600">Control RGB.vi</text>
+  <text x="815" y="260" text-anchor="middle" fill="#46586a" font-size="12.5">controles R, G y B</text>
+  <text x="815" y="278" text-anchor="middle" fill="#46586a" font-size="12.5">del LED remoto</text>
+  <text x="815" y="340" text-anchor="middle" fill="#46586a" font-size="12.5">cliente MQTT (paquete de VIPM)</text>
+
+  <!-- Flechas ESP32 <-> broker -->
+  <line x1="252" y1="182" x2="373" y2="195" stroke="#3b4a5a" stroke-width="2" marker-end="url(#a)"/>
+  <text x="312" y="174" text-anchor="middle" font-size="12" fill="#1d3f63" font-family="Consolas, monospace">UltrasonicSens</text>
+  <line x1="373" y1="245" x2="254" y2="258" stroke="#3b4a5a" stroke-width="2" marker-end="url(#a)"/>
+  <text x="312" y="280" text-anchor="middle" font-size="12" fill="#1d3f63" font-family="Consolas, monospace">RGBValue</text>
+  <text x="312" y="296" text-anchor="middle" font-size="12" fill="#1d3f63" font-family="Consolas, monospace">PeligroDistancia</text>
+
+  <!-- Flechas broker <-> LabVIEW -->
+  <line x1="587" y1="188" x2="708" y2="150" stroke="#3b4a5a" stroke-width="2" marker-end="url(#a)"/>
+  <text x="640" y="146" text-anchor="middle" font-size="12" fill="#1f5a31" font-family="Consolas, monospace">UltrasonicSens</text>
+  <line x1="708" y1="172" x2="589" y2="210" stroke="#3b4a5a" stroke-width="2" marker-end="url(#a)"/>
+  <text x="638" y="232" text-anchor="middle" font-size="12" fill="#1f5a31" font-family="Consolas, monospace">PeligroDistancia</text>
+  <line x1="708" y1="255" x2="589" y2="240" stroke="#3b4a5a" stroke-width="2" marker-end="url(#a)"/>
+  <text x="650" y="272" text-anchor="middle" font-size="12" fill="#1f5a31" font-family="Consolas, monospace">RGBValue</text>
+
+  <text x="480" y="405" text-anchor="middle" fill="#46586a" font-size="12.5">Formato de RGBValue: "R/G/B" con ciclos de trabajo de 0 a 65535</text>
+</svg>
