@@ -37,21 +37,24 @@ Apasionado por crear soluciones robustas, documentadas y listas para producción
 - Implementación de **RTOS en microcontroladores** para control en tiempo real.  
 
 ## ⚙️ Proyectos Destacados
-👉 **[Ver portfolio completo](portfolio)**
+👉 **[Ver proyectos documentados](portfolio)**
 
-- **PCB de activación de válvulas con circuito Spike & Hold y ESP32**  
-  Diseño en **Altium Designer** bajo normas IPC, desarrollo de firmware en **C** para control de válvulas de alta eficiencia.
+- **[PCB de activación de válvulas con circuito Spike & Hold y ESP32](proyectos/pcb-spike-hold-esp32)**  
+  Diseño en **Altium Designer** según IPC-2221, aislamiento óptico y etapa de potencia para válvulas de 24 V. Placa fabricada y probada.
 
 - **Sistema de adquisición de datos con myRIO y LabVIEW**  
   Implementación de un sistema de monitoreo en tiempo real para variables de proceso, integrando hardware de adquisición y visualización en LabVIEW.
 
-- **Sistema de seguimiento para colector térmico solar con myRIO y LabVIEW**  
+- **[Sistema de seguimiento para colector térmico solar con myRIO y LabVIEW](proyectos/seguidor-solar-myrio)**  
   Diseño mecánico en **Solid Edge**, simulación de movimiento, modelamiento del sistema en **LabVIEW** y desarrollo del controlador para **myRIO**.
+
+- **[Cámara térmica con sensor MLX90640 y myRIO](proyectos/camara-termica-myrio)**  
+  Traducción a **LabVIEW** de la librería de calibración del sensor, lectura por **I2C** y visualización en tiempo real.
 
 - **Diseño de CNC para mostrador y escaparate**  
   Modelado completo en **Solid Edge** y desarrollo del controlador de posición con **STM32**, integrando firmware embebido y control de motores.
 
-- **Modelado 3D de gabinetes electrónicos**  
+- **[Modelado 3D de gabinetes electrónicos](proyectos/diseno-mecanico-cad)**  
   Diseño de gabinetes y carcasas en **Solid Edge** y **SolidWorks**, optimizados para manufactura y montaje electrónico.
 
 - **Simulación de sistemas de control**  
